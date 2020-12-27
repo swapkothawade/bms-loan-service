@@ -24,7 +24,7 @@ public class LoanController {
      */
     @GetMapping("/restricted/loan/{loanid}")
     public ResponseEntity<?> loanDetails(@RequestHeader("authorization") String token,@PathVariable("loanid") String loanid){
-        String username = "swapnil.kothawade@gmail.com"; // As stateless service, user information needs to be derived using token.
+        String username = "abc@gmail.com"; // As stateless service, user information needs to be derived using token.
         if(loanid!=null && !loanid.isEmpty()){
             // retrieve loan details based on loan id.. for now
             List<Loan> loans = loanService.getLoanDetails(username);
