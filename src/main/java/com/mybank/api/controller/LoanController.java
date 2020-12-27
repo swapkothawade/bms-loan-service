@@ -43,7 +43,7 @@ public class LoanController {
     public ResponseEntity<?> applyLoan(@RequestHeader("authorization") String token, @RequestBody Loan loanRequest){
         // get User details here using token
         try {
-            String username = "swapnil.kothawade@gmaill.com";
+            String username = "abc@gmail.com";
             loanRequest.setUsername(username);
             loanService.applyLoan(loanRequest);
             return ResponseEntity.ok("Loan Applied Successfully");
